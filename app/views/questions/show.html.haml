@@ -1,4 +1,6 @@
-.show-question.m-5
+.d-flex.justify-content-end
+  = link_to 'Generate new question', root_path, class: 'btn btn-secondary mt-2 text-light mr-5'
+.show-question.mx-5.my-5
   .row.justify-content-center.align-items-center.h-100
-    = @question.value
-  = link_to 'Back', root_path
+    %h1.text-light= @question.value
+
