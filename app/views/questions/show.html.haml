@@ -1,5 +1,6 @@
 .d-flex.justify-content-end
-  = link_to 'Generate new question', root_path, class: 'btn btn-secondary mt-2 text-light mr-5'
+  - @new_question = Question.order(Arel.sql('RANDOM()')).first
+  = link_to 'Generate new rule', @new_question, class: 'btn btn-secondary mt-2 text-light mr-5'
 .show-question.mx-5.my-5
   .row.justify-content-center.align-items-center.h-100
     %h1.text-light= @question.value
