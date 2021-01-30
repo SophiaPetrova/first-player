@@ -1,0 +1,3 @@
+- @question = Question.order(Arel.sql('RANDOM()')).first
+.d-flex
+  = link_to 'The first player is?', @question, class: 'btn btn-warning position-center'
